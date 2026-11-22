@@ -1,5 +1,5 @@
 // Cache-first offline support. Bump version when app files change.
-const CACHE_NAME = 'grocerly-offline-v3';
+const CACHE_NAME = 'grocerly-offline-v6';
 const APP_FILES = [
   './',
   './index.html',
@@ -8,7 +8,8 @@ const APP_FILES = [
   './export.js',
   './manifest.webmanifest',
   './icons/icon-192.png',
-  './icons/icon-512.png'
+  './icons/icon-512.png',
+  './icons/icon-maskable-512.png'
 ];
 
 self.addEventListener('install', event => {
