@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Grocerly &mdash; Grocery Lists
+  </title>
+  <link href="./style.css" rel="stylesheet"/>
+  <link href="./manifest.webmanifest" rel="manifest"/>
+  <meta content="#173d87" name="theme-color"/>
+  <link href="./icons/icon-192.png" rel="icon"/>
+  <link href="./icons/icon-192.png" rel="apple-touch-icon"/>
+ </head>
+ <body>
+  <header>
+   <div class="brand">
+    🛒 Grocerly
+    <span>
+     .
+    </span>
+   </div>
+   <div class="sub">
+    Your shopping, simplified.
+   </div>
+  </header>
+  <main class="wrap">
+   <section class="hero">
+    <div>
+     <div style="font-size:11px;font-weight:800;color:#986f15;letter-spacing:1px">
+      LET'S GET SHOPPING
+     </div>
+     <h1>
+      Organize your groceries
+     </h1>
+     <p>
+      Create sections, then select the items you want to export.
+     </p>
+    </div>
+    <div style="font-size:40px">
+     🧺
+    </div>
+   </section>
+   <section class="panel">
+    <h2>
+     📁 Your sections
+    </h2>
+    <p class="muted">
+     Create categories like Fruits, Vegetables, Dairy, or anything else.
+    </p>
+    <form class="addrow sectionform" id="sectionform">
+     <input id="sectionentry" maxlength="45" placeholder="New section name (e.g. Fruits)" required="" type="text"/>
+     <button class="add" type="submit">
+      ＋ Create
+     </button>
+    </form>
+   </section>
+   <section class="panel">
+    <h2>
+     ＋ Add grocery item
+    </h2>
+    <p class="muted">
+     Choose the section where your item belongs.
+    </p>
+    <form class="itemform" id="itemform">
+     <input id="entry" maxlength="100" placeholder="e.g. Apples, milk, bread..." required="" type="text"/>
+     <select aria-label="Select section" id="category">
+     </select>
+     <button class="add" type="submit">
+      ＋ Add
+     </button>
+    </form>
+   </section>
+   <section class="panel">
+    <div class="headrow">
+     <div>
+      <h2>
+       Shopping list
+       <span class="count" id="count">
+        0
+       </span>
+      </h2>
+      <p class="muted" id="status">
+       0 items selected
+      </p>
+     </div>
+     <button class="subtle" id="clear" type="button">
+      Clear items
+     </button>
+    </div>
+    <div class="progress">
+     <div class="bar" id="bar">
+     </div>
+    </div>
+    <div id="sections">
+    </div>
+   </section>
+   <section class="panel">
+    <h2>
+     &mapstodown; Export your list
+    </h2>
+    <p class="muted">
+     Only selected items and their sections appear in exports. Empty sections are excluded.
+    </p>
+    <div class="export">
+     <button id="image" type="button">
+      <span class="ico">
+       ▧
+      </span>
+      Save Image
+      <small>
+       PNG
+      </small>
+     </button>
+     <button id="copy" type="button">
+      <span class="ico">
+       ▤
+      </span>
+      Copy Text
+      <small>
+       Clipboard
+      </small>
+     </button>
+     <button id="pdf" type="button">
+      <span class="ico">
+       ▣
+      </span>
+      Save PDF
+      <small>
+       Print / PDF
+      </small>
+     </button>
+    </div>
+   </section>
+   <footer>
+    Saved automatically on this desktop browser ✨
+   </footer>
+  </main>
+  <div class="toast" id="toast" role="status">
+  </div>
+  <script defer src="./export.js">
+  </script>
+  <script defer src="./app.js">
+  </script>
+ </body>
+</html>
+
